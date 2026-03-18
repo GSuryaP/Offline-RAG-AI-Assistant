@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+wikipedia
+faiss-cpu
+sentence-transformers
+transformers
+torch
+python-dotenv

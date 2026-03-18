@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Offline AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+
+<div class="container">
+
+    <header>
+        <div class="logo-mark">
+            <span class="pulse-ring"></span>
+            <span class="brain-icon">⬡</span>
+        </div>
+        <div class="header-text">
+            <h1>Offline AI Assistant</h1>
+            <p class="subtitle">Local knowledge. Zero latency.</p>
+        </div>
+        <div class="status-badge" id="statusBadge">
+            <span class="dot"></span> Standby
+        </div>
+    </header>
+
+    <!-- TOPIC INPUT -->
+    <div class="top-bar">
+        <div class="input-wrapper">
+            <span class="input-label">KNOWLEDGE TOPICS</span>
+            <input id="topics" placeholder="e.g.  AI,  Machine Learning,  Neural Networks" autocomplete="off">
+        </div>
+        <button onclick="init()" class="btn-init">
+            <span class="btn-text">Initialize</span>
+            <span class="btn-icon">→</span>
+        </button>
+    </div>
+
+    <!-- CHAT BOX -->
+    <div id="chat" class="chat-box">
+        <div class="chat-empty">
+            <div class="empty-icon">◈</div>
+            <p>Initialize a knowledge base to begin.</p>
+        </div>
+    </div>
+
+    <!-- INPUT AREA -->
+    <div class="input-area">
+        <div class="question-wrapper">
+            <input id="question" placeholder="Ask anything…" autocomplete="off" onkeydown="if(event.key==='Enter') ask()">
+        </div>
+        <button onclick="ask()" class="btn-send">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+    // Patch init and ask to update UI status
+    const _origInit = init;
+    window.init = async function() {
+        const badge = document.getElementById('statusBadge');
+        badge.innerHTML = '<span class="dot loading"></span> Initializing…';
+        badge.classList.add('active');
+        const topicsVal = document.getElementById('topics').value;
+        if (!topicsVal.trim()) { badge.innerHTML = '<span class="dot"></span> Standby'; badge.classList.remove('active'); return; }
+        try {
+            await _origInit();
+            badge.innerHTML = '<span class="dot ready"></span> Ready';
+            document.querySelector('.chat-empty') && (document.querySelector('.chat-empty').style.display = 'none');
+        } catch(e) {
+            badge.innerHTML = '<span class="dot error"></span> Error';
+        }
+    };
+</script>
+</body>
+</html>

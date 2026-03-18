@@ -1,0 +1,34 @@
+# Virtual environments
+genaienv/
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# Data / ML
+data/
+models/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# HuggingFace / Transformers cache
+.cache/
+model_cache/
+hf_cache/
+
+# Logs / outputs
+*.log
+outputs/
+
+# OS files
+.DS_Store
