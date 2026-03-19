@@ -109,7 +109,7 @@ xdg-open frontend/index.html
 Use full names for best results:
 
 - `Artificial Intelligence`
-- `Machine Learning` *(handled via fallback)*
+- `Machine Learning`
 - `Mars`
 - `Operating System`
 - `Python (programming language)`
@@ -156,11 +156,11 @@ Switched from cloud APIs (Gemini) to an **offline FLAN-T5 model**:
 
 ## Future Improvements
 
-- [ ] Highlight relevant context words in responses
-- [ ] Display similarity scores alongside results
-- [ ] Persist FAISS index to disk
-- [ ] Upgrade to a more capable local LLM (e.g., Mistral)
-- [ ] Deploy as a public web app
+- Highlight relevant context words in responses
+- Display similarity scores alongside results
+- Persist FAISS index to disk
+- Upgrade to a more capable local LLM (e.g., Mistral)
+- Deploy as a public web app
 
 ---
 
