@@ -109,10 +109,35 @@ xdg-open frontend/index.html
 Use full names for best results:
 
 - `Artificial Intelligence`
+    - What is artificial intelligence?
+    - Who is the president of artificial intelligence in the year 2050 on mars?
+    - What are the main applications of artificial intelligence?
+    - What are the types of artificial intelligence?
+    - Translate the term 'Artificial Intelligence' into Spanish.
 - `Machine Learning`
+    - What is machine learning?
+    - What are different types of machine learning?
+    - How does machine learning work?
+    - What was the exact price of a machine learning textbook purchased by Abraham Lincoln?
+    - Write a 4-line rhyming poem about how machine learning works.
 - `Mars`
+    - What is Mars?
+    - Why is Mars called the red planet?
+    - What are the main features of Mars?
+    - What is the name of the alien mayor who currently governs Mars?
+    - Name a popular 1990s Hollywood movie that features the planet Mars.
 - `Operating System`
+    - What is an operating system?
+    - What are the functions of an operating system?
+    - What are different types of operating systems?
+    - How many dinosaurs used an Operating System during the Jurassic period?
+    - In exactly three words, what is your personal opinion on the Windows Operating System?
 - `Python (programming language)`
+    - What is Python programming language?
+    - What are the features of Python?
+    - What is Python used for?
+    - What is the exact geographic location and address of the snake that invented Python?
+    - Provide a Python code snippet that prints 'Hello World'.
 
 ---
 
