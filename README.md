@@ -141,6 +141,28 @@ Use full names for best results:
 
 ---
 
+## Implementation Screenshots
+
+![alt text](assets/image.png)
+<br/>
+
+![alt text](assets/image-1.png)
+<br/>
+
+![alt text](assets/image-2.png)
+<br/>
+
+![alt text](assets/image-3.png)
+<br/>
+
+![alt text](assets/image-4.png)
+<br/>
+
+![alt text](assets/image-5.png)
+<br/>
+
+---
+
 ## Known Limitations
 
 - FLAN-T5 is a lightweight model — responses may be less detailed
